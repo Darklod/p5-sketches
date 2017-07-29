@@ -1,8 +1,9 @@
 var slider;
 
 function setup() {
-  createCanvas(600,600,WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   slider = createSlider(1,10,2);
+  slider.position(20, 20);
 }
 
 var b = 20;
