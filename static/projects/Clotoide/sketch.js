@@ -3,7 +3,7 @@ var MIN = 0;
 var MAX = 100;
 
 function setup() {
-  createCanvas(600,600);
+  createCanvas(windowWidth,windowHeight);
   
   translate(width/2,height/2);
   background(0);
