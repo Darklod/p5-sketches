@@ -24,4 +24,4 @@ app.get('/projects/:filename', (req, res) => {
     res.render('pages/project');
 })
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
