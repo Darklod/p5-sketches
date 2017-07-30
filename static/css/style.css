@@ -30,7 +30,7 @@ section {
 }
 
 img {
-    height: 120px;
+    height: auto;
     width: 260px;
 }
 
@@ -39,6 +39,7 @@ img {
     bottom: 80px;
     margin: auto;
     left: 20px;
+	z-index: 1000;
 }
 
 .uk-card-body {
