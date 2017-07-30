@@ -1,5 +1,6 @@
 body {
     padding-top: 40px;
+    background: linear-gradient(hsla(40, 100%, 60%, 1), #03A9F4);
 }
 
 section {
@@ -27,6 +28,14 @@ section {
 img {
     height: 120px;
     width: 260px;
+}
+
+#top {
+    position: fixed;
+    bottom: 64px;
+    margin: auto;
+    height: 40px;
+    left: 20px;
 }
 
 /*footer {

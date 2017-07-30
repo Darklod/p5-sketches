@@ -15,12 +15,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    fs.readdir('static/projects', (err, files) => {
+    var path = 'static/projects';
+    if (req.params) {
+        if (req.params.dir) {
+            path += req.params.dir
+        }
+    }
+    fs.readdir(path, (err, files) => {
         res.render('pages/index', { list: files || [] });
     })
 })
 
 app.get('/projects/:filename', (req, res) => {
+    if (req.params.filename == "Speciali") {
+        res.redirect('/?dir=Speciali')
+    }
     res.render('pages/project');
 })
 
