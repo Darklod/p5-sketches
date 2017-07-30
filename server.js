@@ -16,19 +16,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     var path = 'static/projects';
-    if (req.params) {
-        if (req.params.dir) {
-            path += req.params.dir
+    if (req.query) {
+        if (req.query.dir) {
+            path += '/' + req.query.dir
         }
     }
     fs.readdir(path, (err, files) => {
-        res.render('pages/index', { list: files || [] });
+        res.render('pages/index', { list: files || [], path: path });
     })
 })
 
 app.get('/projects/:filename', (req, res) => {
     if (req.params.filename == "Speciali") {
-        res.redirect('/?dir=Speciali')
+        return res.redirect('/?dir=Speciali')
     }
     res.render('pages/project');
 })

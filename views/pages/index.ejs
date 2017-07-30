@@ -8,7 +8,11 @@
             <div class="uk-width-auto@s">
                 <div class="uk-card uk-card-default uk-card-small">
                     <div class="uk-card-media-top">
-                        <img src="<%= '../../projects/' + item + '/thumbnail.png' %>" alt="">
+                        <% if (path) { %>
+                            <img src="<%= '../../' + path + '/' + item + '/thumbnail.png' %>" alt="">
+                        <% } else { %>
+                            <img src="<%= '../../projects/' + item + '/thumbnail.png' %>" alt="">
+                        <% } %>
                     </div>
                     <div class="uk-card-body">
                         <p><%- link_to(item, '/projects/' + item) %></p>
