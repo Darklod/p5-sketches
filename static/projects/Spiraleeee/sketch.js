@@ -5,18 +5,18 @@ var inc = 0;
 var t1, t2, t3, t4;
 
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(windowWidth, windowHeight);
 
-  createElement("span", "Dimensione: ");
+  var sp1 = createElement("span", "Dimensione: ");
   slider1 = createSlider(-10, 10, 1);
   t1 = createElement("span", "10");
-  createElement("span", "<br>Angolo: ");
+  var sp2 = createElement("span", "Angolo: ");
   slider2 = createSlider(0, 360, 0);
   t2 = createElement("span", "10");
-  createElement("span", "<br>Numero di punti: ");
+  var sp3 = createElement("span", "Numero di punti: ");
   slider3 = createSlider(0, 1000, 10, 10);
   t3 = createElement("span", "10");
-  createElement("span", "<br>Risoluzione: ");
+  var sp4 = createElement("span", "Risoluzione: ");
   slider4 = createSlider(1, 10, 10);
   t4 = createElement("span", "10");
   checkbox = createCheckbox("Unisci i puntini");
@@ -27,6 +27,25 @@ function setup() {
     if (slider2.value() != inc)
       inc = slider2.value();
   });
+  
+  slider1.position(150, 20);
+  slider2.position(150, 50);
+  slider3.position(150, 80);
+  slider4.position(150, 110);
+  checkbox.position(150, 140);
+  checkbox2.position(150, 170);
+  
+  sp1.position(20,20);
+  sp2.position(20,50);
+  sp3.position(20,80);
+  sp4.position(20,110);
+  
+  sp1.style("color", "white");
+  sp2.style("color", "white");
+  sp3.style("color", "white");
+  sp4.style("color", "white");
+  checkbox.style("color", "white");
+  checkbox2.style("color", "white");
 }
 
 

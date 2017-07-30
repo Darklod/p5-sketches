@@ -3,11 +3,15 @@ var sliderB;
 var sliderN;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   
   sliderA = createSlider(1,100,5);
   sliderB = createSlider(1,5  ,2);
   sliderN = createSlider(1,50 ,20);
+  
+  sliderA.position(20, 20);
+  sliderB.position(20, 50);
+  sliderN.position(20, 80);
 }
 
 function draw() {
