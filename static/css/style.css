@@ -3,6 +3,10 @@ body {
     background: linear-gradient(hsla(40, 100%, 60%, 1), #03A9F4);
 }
 
+h1 {
+    color: #fff;
+}
+
 section {
     margin-bottom: 66px;
 }
@@ -32,7 +36,7 @@ img {
 
 #scroll {
     position: fixed;
-    bottom: 100px;
+    bottom: 80px;
     margin: auto;
     left: 20px;
 }
