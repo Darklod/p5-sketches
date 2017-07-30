@@ -1,5 +1,5 @@
 # p5-sketches
-My personal creations using p5.js in a website written in nodejs and express
+My personal creations using p5.js framework in a website written in nodejs and express
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-* [Npm and NodeJS](https://nodejs.org/it/download/) you can download it from the official website
+* [Npm and NodeJS](https://nodejs.org/it/download/) you can download them from the official website
 
 ### Installing
 
