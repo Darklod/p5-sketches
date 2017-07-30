@@ -57,5 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-static/projects/_*
+static/projects/_Links
+static/projects/_Non Funzionanti
 
