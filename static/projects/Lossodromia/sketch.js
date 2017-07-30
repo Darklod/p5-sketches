@@ -6,17 +6,27 @@ var equ;
 var rot = 0;
 
 function setup() {
-  createCanvas(600,600,WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 
   tot = TWO_PI*50;
   equ = tot/4;
 
-  createElement("span", "Angolo: ");
+  var span1 = createElement("span", "Angolo: ");
   sliderB = createSlider(1,10,8);
-  createElement("span", "<br><br>Dimensione: ");
+  var span2 = createElement("span", "Dimensione: ");
   sliderR = createSlider(0,400,200);
-  createElement("span","<br><br>");
-  muovi = createCheckbox("Ruota");
+  muovi = createCheckbox(" Ruota");
+  
+  sliderB.position(120, 20);
+  sliderR.position(120, 50);
+  muovi.position(20, 80);
+  
+  span1.position(20, 20);
+  span2.position(20, 50);
+  
+  span1.style("color", "white");
+  span2.style("color", "white");
+  muovi.style("color", "white");
 }
 
 function draw() {

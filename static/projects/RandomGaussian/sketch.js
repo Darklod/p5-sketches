@@ -1,9 +1,9 @@
 function setup() {
- createCanvas(600, 600);
+ createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
- translate(width/2, width/2);
+ translate(width/2, height/2);
  background(0);
  for (var i = 0; i < 360; i++) {
     rotate(TWO_PI/360);

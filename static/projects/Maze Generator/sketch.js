@@ -6,9 +6,9 @@ var current;
 var stack = [];
 
 function setup(){
-	createCanvas(600,600);
-	cols = height/sz;
-	rows = width/sz;
+	createCanvas(windowWidth, windowHeight);
+	cols = 600/sz;
+	rows = 600/sz;
 
 	for (var y = 0; y < cols; y++) {	
 		for (var x = 0; x < rows; x++) {

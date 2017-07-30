@@ -9,7 +9,7 @@ for (var i = 0; i < segNum; i++) {
 }
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(windowWidth, windowHeight);
   strokeWeight(9);
   stroke(255, 100);
 }

@@ -4,7 +4,7 @@ var n = 15;
 var particles = [];
 
 function setup() {
- createCanvas(600,600);
+ createCanvas(windowWidth, windowHeight);
 	
  for(var i = 0; i < n; i++){
  	var x = map(i,0,n,0,360);

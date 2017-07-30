@@ -5,7 +5,7 @@ rx = 0;
 ry = 0;
 
 function setup() {
-  createCanvas(500, 500, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 
   radio = height / 4.5;
 
