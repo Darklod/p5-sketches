@@ -1,7 +1,9 @@
 var express = require('express');
 var engine = require('ejs-locals');
 var bodyParser = require('body-parser');
-var helpers = require('express-helpers')
+var helpers = require('express-helpers');
+var cookieParser = require('cookie-parser');
+var md5 = require('md5');
 var fs = require('fs');
 var app = express();
 
@@ -13,24 +15,47 @@ app.use(express.static('static'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
-app.get('/', (req, res) => {
+var auth = (req, res, next) => {
+    if (req.params.dir) {
+        if (req.cookies.secret == "ok")
+            next();
+        else 
+            res.render('pages/secret');
+    } else {
+        res.cookie('secret', null);
+        next();
+    }
+}
+
+app.get('/:dir?', auth , (req, res) => {
     var path = 'static/projects';
-    if (req.query) {
-        if (req.query.dir) {
-            path += '/' + req.query.dir
+    if (req.params) {
+        if (req.params.dir) {
+            path += '/' + req.params.dir
         }
     }
     fs.readdir(path, (err, files) => {
-        res.render('pages/index', { list: files || [], path: path });
+        res.render('pages/index', { list: files || [], path: path.replace('static/', '') });
     })
 })
 
 app.get('/projects/:filename', (req, res) => {
     if (req.params.filename == "Speciali") {
-        return res.redirect('/?dir=Speciali')
+        return res.redirect('/Speciali')
     }
     res.render('pages/project');
+})
+
+app.post('/secret', (req, res) => {
+    console.log(req.body);
+    if (req.body.secret && md5(req.body.secret) === "c51ce410c124a10e0db5e4b97fc2af39") {
+        res.cookie('secret', 'ok');
+        res.redirect('/Speciali')
+    } else {
+        res.render('pages/secret', { error: "wrong key"});
+    }
 })
 
 app.listen(process.env.PORT || 3000);

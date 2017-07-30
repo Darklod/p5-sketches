@@ -8,14 +8,10 @@
             <div class="uk-width-auto@s">
                 <div class="uk-card uk-card-default uk-card-small">
                     <div class="uk-card-media-top">
-                        <% if (path) { %>
-                            <img src="<%= '../../' + path + '/' + item + '/thumbnail.png' %>" alt="">
-                        <% } else { %>
-                            <img src="<%= '../../projects/' + item + '/thumbnail.png' %>" alt="">
-                        <% } %>
+                        <img src="<%= '../../' + path + '/' + item + '/thumbnail.png' %>" alt="">
                     </div>
                     <div class="uk-card-body">
-                        <p><%- link_to(item, '/projects/' + item) %></p>
+                        <p><%- link_to(item, '/' + path + '/' + item) %></p>
                     </div>
                 </div>
             </div>
