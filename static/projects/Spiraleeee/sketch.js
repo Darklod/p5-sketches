@@ -40,10 +40,19 @@ function setup() {
   sp3.position(20,80);
   sp4.position(20,110);
   
+  t1.position(300,20);
+  t2.position(300,50);
+  t3.position(300,80);
+  t4.position(300,110);
+
   sp1.style("color", "white");
   sp2.style("color", "white");
   sp3.style("color", "white");
   sp4.style("color", "white");
+  t1.style("color", "white");
+  t2.style("color", "white");
+  t3.style("color", "white");
+  t4.style("color", "white");
   checkbox.style("color", "white");
   checkbox2.style("color", "white");
 }
