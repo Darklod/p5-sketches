@@ -1,4 +1,4 @@
-var img,font,message="LOLL",fontSize;
+var img,font,message="HELLO",fontSize;
 
 function preload() {
   font = loadFont('assets/IndieFlower.ttf');
