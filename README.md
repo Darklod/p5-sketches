@@ -27,9 +27,10 @@ npm start
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Npm](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Express](http://expressjs.com/) - The web framework used
+* [EJS](http://ejs.co/) - Used for templating
+* [Npm](https://www.npmjs.com/) - Dependency Management
+* [P5](https://p5js.org/) - The framework used for the sketches
 
 ## Authors
 
@@ -37,4 +38,4 @@ npm start
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 - License - see the [LICENSE.md](LICENSE.md) file for details
