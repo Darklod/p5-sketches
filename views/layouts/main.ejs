@@ -12,5 +12,10 @@
         <footer>
             <% include ../partials/footer.ejs %>
         </footer>
+        <script>
+            window.onscroll = function(e) {
+                $("#scroll").css("opacity", window.scrollY / 100);
+            }
+        </script>
     </body>
 </html>

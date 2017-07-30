@@ -30,12 +30,20 @@ img {
     width: 260px;
 }
 
-#top {
+#scroll {
     position: fixed;
-    bottom: 64px;
+    bottom: 100px;
     margin: auto;
-    height: 40px;
     left: 20px;
+}
+
+.uk-card-body {
+   border-top: 1px solid lightgrey;
+}
+
+footer div.uk-align-left {
+    margin-top: 7px;
+    margin-bottom: 0px;
 }
 
 /*footer {
