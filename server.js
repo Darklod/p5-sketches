@@ -33,12 +33,15 @@ app.get('/:dir?', auth , (req, res) => {
     var path = 'static/projects';
     if (req.params) {
         if (req.params.dir) {
-            path += '/' + req.params.dir
+            path += '/' + req.params.dir;
         }
     }
-    fs.readdir(path, (err, files) => {
-        res.render('pages/index', { list: files || [], path: path.replace('static/', '') });
+
+    var files = fs.readdirSync(path);
+    files = files.filter((f) => {
+        return fs.statSync(path + '/' + f).isDirectory();
     })
+    res.render('pages/index', { list: files || [], path: path.replace('static/', '') });
 })
 
 app.get('/projects/:filename', (req, res) => {

@@ -58,7 +58,7 @@ footer div.uk-align-left {
     margin-bottom: 0px;
 }
 
-/*footer {
+.fixed-footer {
     position: absolute;
     margin: 0 auto;
     bottom: 0px;
@@ -66,8 +66,8 @@ footer div.uk-align-left {
     height: 66px;
 }
 
-@media screen and (max-width: 1240px) {
-    footer {
+@media screen and (max-width: 920px) {
+    .fixed-footer {
         position: relative;
     }
-}*/
+}

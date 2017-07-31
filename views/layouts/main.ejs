@@ -17,6 +17,14 @@
             window.onscroll = function(e) {
                 $("#scroll").css("opacity", window.scrollY / 100);
             }
+            if ($("body").height() < window.innerHeight) {
+                $("footer").addClass('fixed-footer');
+            }
+            window.resize = function(e) {
+                if ($("body").height() < window.innerHeight) {
+                    $("footer").addClass('fixed-footer');
+                }
+            }
         </script>
     </body>
 </html>
