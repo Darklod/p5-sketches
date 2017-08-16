@@ -35,8 +35,16 @@ function draw(){
 		}
 	}
 
-  translate(width/2, height/2);
+  	translate(width/2, height/2);
 	image(img, 0, 0);
+
+	textSize(30);
+
+	rotate(30);
+	text("AUGURIIIII", 200, 300);
+
+	rotate(30);
+	text("BUON ANNIVERSARIO!", 200, 300);
 
 	//rect(width/2-200,height/2-50,400,100);
 
