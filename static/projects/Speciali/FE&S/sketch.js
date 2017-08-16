@@ -21,6 +21,8 @@ function setup(){
 
 	if (width > height){ fontSize = height; }
 	img = createFontMask(message, font, fontSize, fontSize/1.5, '#FFF');
+	
+	angleMode(DEGREES)
 }
 
 function draw(){
@@ -40,11 +42,14 @@ function draw(){
 
 	textSize(30);
 
-	rotate(30);
-	text("AUGURIIIII", 200, 300);
+	fill(15,100,200);
 
-	rotate(30);
-	text("BUON ANNIVERSARIO!", 200, 300);
+	rotate(-60);
+	text("BUON ANNIVERSARIO!", -350, -350);
+	rotate(35);
+	text("AUGURIIIII", 150, -100);
+	rotate(22);
+	text("( ˘ ³˘)❤", -200, +250);
 
 	//rect(width/2-200,height/2-50,400,100);
 
