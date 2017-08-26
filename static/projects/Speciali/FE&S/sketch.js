@@ -4,7 +4,6 @@ var colour;
 var font;
 var json;
 var img;
-var fontSize = 350;
 var message="LOVE";
 
 function preload(){
@@ -19,8 +18,7 @@ function setup(){
 		particles.push(new Particle(random(width),random(height),colour,0.5));
 	}
 
-	if (width > height){ fontSize = height; }
-	img = createFontMask(message, font, fontSize, fontSize/1.5, '#FFF');
+	img = createFontMask(message, font, width/2, '#FFF');
 	
 	angleMode(DEGREES)
 }
@@ -40,27 +38,29 @@ function draw(){
   	translate(width/2, height/2);
 	image(img, 0, 0);
 
-	textSize(30);
+	var bounds = font.textBounds(message, 0, 0, width/2);
+	var w = bounds.w, h = bounds.h;
+
+	textSize(width/ 40);
+	textAlign(CENTER, CENTER);
 
 	fill(15,100,200);
 
+	push();
+	translate(-(w/2) * 65/100, -(h/2) * 20/100);
 	rotate(-60);
-	text("BUON ANNIVERSARIO!", -350, -350);
-	rotate(35);
-	text("AUGURIIIII", 150, -100);
-	rotate(22);
-	text("( ˘ ³˘)❤", -200, +250);
+	text("BUON ANNIVERSARIO!", 0, 0);
+	pop();
 
-	//rect(width/2-200,height/2-50,400,100);
+	push();
+	translate(+(w/2) * 27/100, -(h/2) * 40/100);
+	rotate(-60 + 35);
+	text("AUGURIIIII", 0, 0);
+	pop();
 
-	/*fill(255);
-	textFont(font);
-	textSize(100);
-	text('I LOVE YOU',width/2,height/2);
-	textAlign(CENTER,CENTER);*/
-
-	//center line
-	//stroke(255);
-	//line(0,height/2,width,height/2);
-	//line(width/2,0,width/2,height);
+	push();
+	translate((w/2) * 3/100, +(h/2) * 85/100);
+	rotate(-60 + 35 + 24);
+	text("( ˘ ³˘)❤", 0, 0);
+	pop();
 }

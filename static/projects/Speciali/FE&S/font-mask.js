@@ -1,11 +1,10 @@
-var createFontMask = function(message, font, fontSize, offset, col) {
-  var bounds,x,y,img;
+var createFontMask = function(message, font, fontSize, col) {
+  var x,y,img;
   
   imageMode(CENTER);
   
-  bounds = font.textBounds(message, 0, 0, fontSize);
-  x = width / 2 - bounds.w / 2;
-  y = height / 2 - bounds.h / 2 + offset;
+  x = width / 2;
+  y = height / 2;
   
   // The shape
   var disc = createGraphics(width,height);
@@ -21,6 +20,7 @@ var createFontMask = function(message, font, fontSize, offset, col) {
   punch.noStroke();
   punch.fill(255);
   punch.textFont(font);
+  punch.textAlign(CENTER, CENTER); 
   punch.textSize(fontSize);
   punch.text(message, x, y);
   
