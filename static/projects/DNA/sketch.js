@@ -1,4 +1,4 @@
-var r = 170;
+var r = 180;
 var c = 20;
 
 function setup(){
@@ -13,10 +13,10 @@ function draw(){
 
 	fill(255, 40 ,100);
 	beginShape()
-	for (var i = 0; i < 360; i++) {
-		var x = r * cos(TWO_PI * i);
-		var y = r * sin(TWO_PI * i);
-		var z = i * c;
+	for (var t = 0; t < 360; t++) {
+		var x = r * cos(TWO_PI * t);
+		var y = r * sin(TWO_PI * t);
+		var z = c * t;
 		vertex(x, y, z);
 	}
 	endShape();
@@ -39,7 +39,7 @@ function draw(){
 		var z = i * c;
 		var point = rotateZ3D({x:x,y:y,z:z},40);
 
-		if(i%6==0) {
+		if(i%8==0) {
 			fill(255, 0, 0)
 		} else if(i%6==0) {
 			fill(0, 255, 0)
