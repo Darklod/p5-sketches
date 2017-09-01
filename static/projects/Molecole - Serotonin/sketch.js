@@ -1,3 +1,9 @@
+var font;
+
+function preload(){
+	font = loadFont('./assets/FreeSans.otf');
+}
+
 function setup(){
 	createCanvas(windowWidth, windowHeight);
 }
@@ -6,14 +12,16 @@ function draw(){
 	background(255);
 
 	translate(width/2, height/2);
-
-	// http://www.tamasoft.co.jp/en/general-info/unicode.html
 	
 	textSize(32);	
-	text('Dopamine: C₈H₁₁NO₂', - 160, -height/2 + 50);
+	textFont(font);
+	text('Serotonin: C₁₀H₁₂N₂O', - 160, -height/2 + 50);
 
 	noStroke();
 	fill(30, 30, 30);
+
+	translate(- 100, 0);
+	rotate(18 * PI / 180);
 
 	push();
 	rotate(90 * PI / 180);
@@ -21,6 +29,7 @@ function draw(){
 	polygon(0, 0, 100, 6, 15, [0,2,4]);
 	pop();
 
+	push();
 	rotate(30 * PI / 180);
 	beginShape();
 	vertex(-120, -7.5);
@@ -30,26 +39,23 @@ function draw(){
 	endShape();
 
 	ellipse(-250, 0, 60, 60);
+	pop();
 
-	rotate(-60 * PI / 180);
+	polygon(195, 0, 95, 5, 15);
+	polygon(195, 0, 75, 5, 15, [4]);
+
+	ellipse(223, 90, 60, 60);
+
+	rotate(110 * PI / 180);
+	translate(-50, -180);
 	beginShape();
 	vertex(-120, -7.5);
-	vertex(-230, -7.5);
-	vertex(-230, +7.5);
-	vertex(-120, +7.5);
-	endShape();
-
-	ellipse(-250, 0, 60, 60);
-
-	rotate(-180 * PI / 180);
-	beginShape();
-	vertex(-120, -7.5);
-	vertex(-230, -7.5);
-	vertex(-230, +7.5);
+	vertex(-200, -7.5);
+	vertex(-200, +7.5);
 	vertex(-120, +7.5);
 	endShape();
 	
-	translate(-224, 3);
+	translate(-194, 3);
 	
 	rotate(60 * PI /180)
 	beginShape();

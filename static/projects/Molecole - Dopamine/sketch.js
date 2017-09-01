@@ -1,3 +1,9 @@
+var font;
+
+function preload(){
+	font = loadFont('./assets/FreeSans.otf');
+}
+
 function setup(){
 	createCanvas(windowWidth, windowHeight);
 }
@@ -7,9 +13,8 @@ function draw(){
 
 	translate(width/2, height/2);
 
-	// http://www.tamasoft.co.jp/en/general-info/unicode.html
-	
-	textSize(32);	
+	textSize(32);
+	textFont(font);
 	text('Dopamine: C₈H₁₁NO₂', - 160, -height/2 + 50);
 
 	noStroke();
