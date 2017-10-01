@@ -6,10 +6,10 @@ var font;
 var points = [];
 var bounds;
 var randomPoints = [];
-var message = "Aaaaaa!";
+var message = "Magic!";
 
 function preload() {
-	font = loadFont('./assets/JeanSunHo.ttf'); //cambiare font
+	font = loadFont('./assets/Prohandy Regular.otf'); //cambiare font
 }
 
 function setup(){
@@ -17,15 +17,13 @@ function setup(){
 	rectMode(CENTER);
 	textAlign(CENTER, CENTER);
 
-	background(0);
-	stroke(255);
-
+	noStroke();
 	push();
 
 	translate(width/2, height/2);
-	bounds = font.textBounds(message, 0, 0, width/2);	
+	bounds = font.textBounds(message, 0, 0, width/2.5);	
 	translate(-bounds.w/2, +bounds.h/3);
-	points = font.textToPoints(message, 0, 0, width/2, {sampleFactor:0.3});
+	points = font.textToPoints(message, 0, 0, width/2.5, {sampleFactor:0.3});
 
 	pop();
 
@@ -33,19 +31,19 @@ function setup(){
 }
 
 function draw(){
-	background(0);
+	background(255);
 
 	translate(width/2, height/2);
 	translate(-bounds.w/2, + bounds.h/3);
 
-	if (k < 1000) {
+	if (k < 500) {
 		for (var i = 0; i < 3; i++) {
-			var c = parseInt(random(360));
+			var c = parseInt(random(190, 260));
 			p = new Particle(
 				random(-windowWidth, windowWidth), 
 				random(-windowHeight, windowHeight), 
-				color('hsb(' + c +', 100%, 100%)'), 
-				color('hsb(' + c +', 100%, 50%)')
+				color('hsla(' + c +', 100%, 50%, 1)'), 
+				color('hsla(' + c +', 100%, 30% , 1)')
 			);
 			particles.push(p);
 			move.push(true);
