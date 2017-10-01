@@ -17,8 +17,6 @@ function draw(){
 		move.push(true);
 	}
 
-	if (n >= particles.length) noLoop();
-
 	for	(var i = 0; i < particles.length; i++) {		
 		var p = particles[i];
 		p.move(random(width/2 - 100, width/2 + 100), random(height/2 - 100, height/2 + 100));
