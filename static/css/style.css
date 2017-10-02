@@ -66,6 +66,14 @@ footer div.uk-align-left {
     height: 66px;
 }
 
+a {
+   color: #105ead;
+}
+
+.uk-card-primary.uk-card-body .uk-icon-button, .uk-card-primary>:not([class*=uk-card-media]) .uk-icon-button, .uk-card-secondary.uk-card-body .uk-icon-button, .uk-card-secondary>:not([class*=uk-card-media]) .uk-icon-button, .uk-light .uk-icon-button, .uk-offcanvas-bar .uk-icon-button, .uk-overlay-primary .uk-icon-button, .uk-section-primary:not(.uk-preserve-color) .uk-icon-button, .uk-section-secondary:not(.uk-preserve-color) .uk-icon-button, .uk-tile-primary:not(.uk-preserve-color) .uk-icon-button, .uk-tile-secondary:not(.uk-preserve-color) .uk-icon-button {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 @media screen and (max-width: 920px) {
     .fixed-footer {
         position: relative;

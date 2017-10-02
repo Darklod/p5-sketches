@@ -37,8 +37,8 @@ function draw(){
 	translate(-bounds.w/2, + bounds.h/3);
 
 	if (k < 500) {
-		for (var i = 0; i < 3; i++) {
-			var c = parseInt(random(190, 260));
+		for (var i = 0; i < 4; i++) {
+			var c = parseInt(random(185, 260));
 			p = new Particle(
 				random(-windowWidth, windowWidth), 
 				random(-windowHeight, windowHeight), 

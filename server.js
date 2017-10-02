@@ -3,6 +3,7 @@ var engine = require('ejs-locals');
 var bodyParser = require('body-parser');
 var helpers = require('express-helpers');
 var cookieParser = require('cookie-parser');
+var compression = require('compression');
 var md5 = require('md5');
 var fs = require('fs');
 var app = express();
@@ -16,6 +17,7 @@ app.use(express.static('static'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(compression());
 
 var auth = (req, res, next) => {
     if (req.params.dir) {
