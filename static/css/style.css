@@ -30,14 +30,23 @@ section {
 }
 
 img {
-    height: auto;
+    height: 120px;
     width: 260px;
+    visibility: hidden;
+}
+
+.uk-card-media-top {
+    height: 120px;
+    background-color: black;
 }
 
 @media screen and (max-width: 640px) {
     img {
         height: auto;
         width: 100%;
+    }
+    .uk-card-media-top {
+        height: auto;
     }
 }
 
