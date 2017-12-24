@@ -54,7 +54,6 @@ app.get('/projects/:filename', (req, res) => {
 })
 
 app.post('/secret', (req, res) => {
-    console.log(req.body);
     if (req.body.secret && md5(req.body.secret) === "c51ce410c124a10e0db5e4b97fc2af39") {
         res.cookie('secret', 'ok');
         res.redirect('/Speciali')
